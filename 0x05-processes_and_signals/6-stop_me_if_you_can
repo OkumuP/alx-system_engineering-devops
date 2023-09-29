@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Check if the process exists
+if pgrep -f "4-to_infinity_and_beyond" > /dev/null; then
+    # Send SIGTERM signal to gracefully terminate the process
+    pkill -SIGTERM -f "4-to_infinity_and_beyond"
+    echo "Termination signal sent to 4-to_infinity_and_beyond process."
+else
+    echo "4-to_infinity_and_beyond process not found."
+fi
+
