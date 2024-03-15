@@ -1,6 +1,6 @@
-# Increase the traffic for Nginx
+# Increase traffic for Nginx
 
-# Increase the ULIMIT
+# Increase  ULIMIT
 exec { 'fix--for-nginx':
   command => 'sed -i "s/15/4096/" /etc/default/nginx',
   path    => '/usr/local/bin/:/bin/'
